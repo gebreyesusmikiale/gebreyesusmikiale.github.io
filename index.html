@@ -36,6 +36,10 @@ body {
 .cursor { position: fixed; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform 0.08s; }
 .cursor-ring { position: fixed; width: 40px; height: 40px; border: 1px solid rgba(184,150,90,0.4); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.18s ease; }
 .cursor-ring.hovering { width: 60px; height: 60px; border-color: var(--gold); background: rgba(184,150,90,0.05); }
+@media (hover: none) and (pointer: coarse) {
+  .cursor, .cursor-ring { display: none !important; }
+  body { cursor: auto; }
+}
 
 /* ── NAV ── */
 nav {
@@ -228,6 +232,7 @@ nav.scrolled {
 
 .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
+@media (max-width: 900px) { .hero-scroll { display: none !important; } }
 .hero-scroll {
   position: absolute;
   bottom: 40px;
@@ -1072,7 +1077,7 @@ footer p {
     </div>
     <h2 class="section-title" style="margin-bottom:28px;">A camera carried<br>across <em>three countries</em></h2>
     <div class="about-body">
-      <p>I am <strong>Gebreyesus Mehari Mikiale</strong> — a Tigrayan photographer currently based in Florence, Italy, where I am completing a Master's degree in Software Science and Technology at the <strong>University of Florence</strong> on a UN scholarship.</p>
+      <p>I am <strong>Gebreyesus Mehari Mikiale</strong> — a Tigrayan photographer currently based in Florence, Italy, where I am completing a Master's degree in Software Science and Technology at the <strong>University of Florence</strong> on a UN UNICORE scholarship.</p>
       <p>I started photography in 2018. When war came to my region in 2021, I fled — travelling overland from Addis Ababa through Moyale to Nairobi, one of the most dangerous migration routes in East Africa.</p>
     </div>
     <div class="about-quote">
@@ -1107,7 +1112,7 @@ footer p {
         <div class="journey-dot"></div>
         <div>
           <div class="journey-year">2025–Now</div>
-          <div class="journey-text">Italy — Master's degree, University of Florence (UN UNICORE scholarship)</div>
+          <div class="journey-text">Italy — Master's degree, University of Florence (UN scholarship)</div>
         </div>
       </div>
     </div>
